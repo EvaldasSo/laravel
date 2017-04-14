@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Cache;
 use App\Http\Requests\PostsRequest;
 use App\Post;
 use Carbon\Carbon;
+use App\Http\Controllers\Controller;
+
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class PostsController extends Controller
 {
@@ -106,10 +110,8 @@ class PostsController extends Controller
     {
         $this->authorize('update', $post);
 
-        $id = Post::findOrFail($post);
+        $post->delete();
 
-        $id->delete();
-
-        return redirect()->route('posts.index', $post)->withSuccess(__('Post successfully deleted!'));
+        return redirect('/')->withSuccess(__('Post successfully deleted!'));
     }
 }

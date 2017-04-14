@@ -10,12 +10,8 @@
     @can('update', $post)
 
         <p>
-            <a href="{{ route('posts.edit', $post) }}" class="pull-left btn btn-primary">{{ __('Edit') }}</a>
+            <a href="{{ route('posts.edit', $post) }}" class="pull-right btn btn-primary">{{ __('Edit') }}</a>
         </p>
-
-        {!! Form::open(['method' => 'DELETE','route' => ['posts.destroy', $post]]) !!}
-        {!! Form::submit('Delete', ['class' => 'btn btn-danger pull-right ']) !!}
-        {!! Form::close() !!}
     @endcan
 
 

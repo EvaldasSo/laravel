@@ -8,4 +8,4 @@
     {!! Form::textarea('content', null, ['class' => 'form-control', 'placeholder' => __('Content')]) !!}
 </div>
 
-{!! Form::submit(__('Publish'), ['class' => 'btn btn-primary pull-right']) !!}
+{!! Form::submit(__('Save'), ['class' => 'btn btn-primary pull-right']) !!}
