@@ -21,4 +21,5 @@ class PostPolicy
     {
         return $user->id === $post->author_id;
     }
+
 }

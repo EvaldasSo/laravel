@@ -18,7 +18,10 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                &nbsp;s
+                <li>{{ link_to_route('home', __('Home')) }}</li>
+                <li>{{ link_to_route('register', __('Posts')) }}</li>
+                <li>{{ link_to_route('feed', __('News')) }}</li>
+                <li>{{ link_to_route('category', __('Categories')) }}</li>
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -35,10 +38,16 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                {{ link_to_route('users.show', __('User profile'), Auth::user()) }}
+                                {{ link_to_route('users.show', __('User Profile'), Auth::user()) }}
                             </li>
                             <li>
-                                {{ link_to_route('posts.create', __('Add post')) }}
+                                {{ link_to_route('posts.create', __('Add Post')) }}
+                            </li>
+                            <li>
+                                {{ link_to_route('feed.create', __('Add Feed')) }}
+                            </li>
+                            <li>
+                                {{ link_to_route('category.create', __('Add Category')) }}
                             </li>
                             <li>
                                 <a href="{{ url('/logout') }}"
@@ -56,5 +65,6 @@
                 @endif
             </ul>
         </div>
+
     </div>
 </nav>

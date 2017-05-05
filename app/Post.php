@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Scopes\PostedScope;
-use App\User;
+
 
 class Post extends Model
 {

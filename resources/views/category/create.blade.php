@@ -3,13 +3,12 @@
 @section('content')
     @component('components.panels.default')
         @slot('title')
-            {{ __('Post Form') }}
+            {{ __('Category Form') }}
         @endslot
 
-        {!! Form::open(['route' => 'posts.store', 'method' => 'post']) !!}
-        @include ('posts/_form')
+        {!! Form::open(['route' => 'category.store', 'method' => 'post']) !!}
+        @include ('category/_form')
         {!! Form::close() !!}
-
 
     @endcomponent
 @endsection

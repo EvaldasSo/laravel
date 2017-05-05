@@ -3,7 +3,7 @@
 @section('content')
     @component('components.panels.default')
         @slot('title')
-            {{ __('News') }}
+            {{ __('Posts') }}
             <a href="{{ route('posts.feed') }}" class="pull-right" data-turbolinks="false">
                 <i class="fa fa-rss" aria-hidden="true"></i>
             </a>

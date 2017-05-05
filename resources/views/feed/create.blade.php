@@ -6,9 +6,10 @@
             {{ __('Post Form') }}
         @endslot
 
-        {!! Form::open(['route' => 'posts.store', 'method' => 'post']) !!}
-        @include ('posts/_form')
+        {!! Form::open(['route' => 'feed.store', 'method' => 'post']) !!}
+        @include ('feed/_form')
         {!! Form::close() !!}
+
 
 
     @endcomponent

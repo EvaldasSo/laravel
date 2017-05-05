@@ -18,3 +18,7 @@
         </div>
     </div>
 </form>
+
+@can('update', $user)
+    <a href="{{ route('users.edit', $user) }}" class="pull-right btn btn-primary">{{ __('users.edit') }}</a>
+@endcan

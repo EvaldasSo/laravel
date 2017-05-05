@@ -14,5 +14,4 @@
         </p>
     @endcan
 
-
 @endcomponent

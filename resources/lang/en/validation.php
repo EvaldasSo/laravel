@@ -96,6 +96,7 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
+    'old_password' => 'The :attribute field does not match.',
 
     'custom' => [
         'attribute-name' => [

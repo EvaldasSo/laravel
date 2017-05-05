@@ -47,4 +47,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'author_id')->orderBy('posted_at', 'desc');
     }
+
+    public function feeds()
+    {
+        return $this->hasMany(Feed::class, 'author_id')->latest();
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class, 'author_id')->latest();
+    }
 }

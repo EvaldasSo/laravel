@@ -3,9 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Auth;
 
-class UsersRequest extends FormRequest
+class FeedsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,9 +24,8 @@ class UsersRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:255',
-            'email' => 'required|email|unique:users,email,' . $this->user->id,
-            'password' => 'nullable|confirmed'
+            'feed_url' => 'required',
+            'category.*' => 'required',
         ];
     }
 }
